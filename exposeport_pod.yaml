@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: rounak
+  name: rounak
+spec:
+  containers:
+  - image: nginx
+    name: rounak
+    ports:
+    - containerPort: 80
+    resources:
+      limits:
+        memory: "800Mi"
+        cpu: "800m"
+      requests:
+        memory: "200Mi"
+        cpu: "100m"
+
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

@@ -3,3 +3,14 @@ alias k=kubectl
 kubectl config set-context --current --namespace=ckad
 
 kubectl create quota myrq --hard=cpu=1,memory=1G,pods=2 --dry-run=client -o yaml
+
+kubectl get po nginx -o jsonpath='{.spec.containers[].image}{"\n"}'
+
+kubectl logs nginx --previous
+
+kubectl delete pods webapp --grace-period=0
+
+pod/new-replica-set-2g46d
+kubectl delete pods <pod> --grace-period=0 --force
+
+kubectl expose pod redis --port=6379 --name redis-service
