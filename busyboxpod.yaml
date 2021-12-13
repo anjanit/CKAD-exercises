@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: busybox-describe
+  name: busybox-describe
+spec:
+  containers:
+  - command:
+    - env
+    image: nginx
+    name: busybox-describe
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}

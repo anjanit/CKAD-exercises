@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: nginx-describe-quota
+  name: nginx-describe-quota
+  namespace: ckad
+spec:
+  containers:
+  - image: nginx
+    name: nginx-describe
+    resources: 
+      limits:
+       memory: "800Mi"
+	   cpu: "800m"
+      requests:
+	   memory: "600Mi"
+	   cpu: "400m"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
