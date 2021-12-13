@@ -15,8 +15,8 @@ spec:
         memory: "800Mi"
         cpu: "800m"
       requests:
-	    memory: "600Mi"
-	    cpu: "400m"
+	      memory: "600Mi"
+	      cpu: "400m"
   dnsPolicy: ClusterFirst
   restartPolicy: Never
 status: {}
