@@ -14,3 +14,7 @@ pod/new-replica-set-2g46d
 kubectl delete pods <pod> --grace-period=0 --force
 
 kubectl expose pod redis --port=6379 --name redis-service
+
+kubectl get pods -- yaml
+
+kubectl explain pods --recursive | enfFrom - A3
